@@ -9,6 +9,13 @@ exports.register = async (req, res) => {
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(password, salt)
 
+    const exist =await user.findOne({ email: email })
+    if (exist) {
+       return res.status(401).json({
+            success: false,
+            message: "user already exist"
+        })
+    }
     const newUser = new user({
         username: username,
         email: email,
