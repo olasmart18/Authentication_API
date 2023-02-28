@@ -1,4 +1,7 @@
 const mongoose = require("mongoose");
+const session = require("express-session")
+const mongoDBSession = require("connect-mongodb-session")(session)
+
 
 mongoose.set("strictQuery", true)
 
@@ -12,4 +15,10 @@ const connect = async (err) => {
     console.log("cannot connect db, try again");
 }
 }
-module.exports = connect;
+
+const store = new mongoDBSession({
+    uri: process.env.MONGO_URI+db,
+    collection: "sessions"
+})
+
+module.exports = {connect, store}

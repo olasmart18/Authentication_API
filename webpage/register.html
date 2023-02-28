@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<style>
+    .frm{
+        border: 1px solid gray;
+        width: 25%;
+        margin: 30px auto;
+    display: block;
+    line-height: 40px;
+    /* margin-left:20px ; */
+}
+
+.frm h2{
+    text-align: center;
+    color: orange;
+    font-family: Arial;
+}
+
+.frm button{
+    width: 75%;
+    margin: 10px auto;
+    background: orange;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    /* color: ; */
+}
+
+
+.form p{
+    line-height:20PX ;
+    margin-bottom: 5px;
+
+}
+
+.frm input{
+    width: 70%;
+    height: 30px;
+    margin: 10px auto;
+    background: transparent;
+    border-top:none ;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #fff;
+    color: #111;
+
+}
+
+.form input:focus{
+    outline: none;
+    /* border-bottom: ; */
+}
+
+.form p{
+    color: #fff;
+    font-family:  Tahoma;
+}
+
+input:hover{
+    transition: 0.4s ease-in-out;
+    border-bottom: 2px solid orange;
+}
+
+input:active{
+    border-bottom: 2px solid orange;
+
+}
+
+.content{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    line-height: 40px;
+    margin-left: 30px;
+
+}
+span{
+    color: orange;
+    font-weight: bold;
+}
+
+.content h3{
+    color: orange;
+    text-decoration: dashed;
+    font-weight: bold;
+}
+
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.icons ion-icon{
+    color: #fff;
+    font-size: 20px;
+    padding-left: 14px;
+    padding-top: 5PX;
+    transition: 0.4s ease;
+}
+
+.icons ion-icon:hover{
+    color: orange;
+}
+</style>
+<body>
+    <div class="frm">
+        <form action="/user/auth/register" method="post">
+          <h2>register here</h2>
+          <input type="text" name="username" id="" placeholder="enter a username">
+        <input
+          type="email"
+          name="email"
+          placeholder="enter your email"
+          required
+        />
+        <input type="password" name="password" placeholder="input password" required />
+        <div>
+          <a href="#"><button>sign up</button></a>
+      </div>
+        </form>
+          
+</body>
+</html>
